@@ -2,6 +2,22 @@
 #@Jiani Shen
 #May-06-2017
 
+#Y: Sample * 1: Price[0,1] represent if the sample pay $1 or not
+#X: Sample * Document[0,1] represent if the sample read the document in the specific period(first 30 days)
+ 
+#Set equation Y = XB. 
+#B[document * 1: price] represent how much each sample willing to pay per document
+ 
+#To solve the equation we need to minimize
+#Model error: (Y-XB)^2
+#L2 penalty: ||B|| = sqrt(sum(Bi^2)
+#Also for the actual case, Yi >= 0
+ 
+#It comes to be a prox-prox problem and we can have:
+#Y = positive(inverse(X’X) * X’A – lambda), where if x>0, positive(x) = x else positive(x) = 0
+
+
+
 
 ##########################
 #Part 1
